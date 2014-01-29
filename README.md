@@ -27,7 +27,7 @@ Use `append -h` to get the command usage.
 
 ### Class: Appender
 
-Create an Appender object.
+Create an Appender object. It's a `transform stream` that can be read to get the result.
 
 ```javascript
 var Appender = require('appender');
