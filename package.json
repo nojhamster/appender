@@ -1,0 +1,25 @@
+{
+  "name": "appender",
+  "version": "0.0.1",
+  "description": "a module to append files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nojhamster/appender.git"
+  },
+  "keywords": [
+    "files",
+    "append"
+  ],
+  "author": "nojhamster",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nojhamster/appender/issues"
+  },
+  "dependencies": {
+    "optimist": "~0.6.0"
+  }
+}

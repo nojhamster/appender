@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+var Appender = require('..');
+var optimist = require('optimist')
+  .usage('Usage: $0 [OPTION] ... [FILES / DIRECTORIES]')
+  .describe('skip', 'skip a given number of lines for each file')
+  .describe('filter', 'a regexp for filtering files to append')
+  .describe('sort', 'sort files by name before appending them (DESC or ASC)')
+  .describe('inline', 'no linebreak between files')
+  .alias('skip', 'k')
+  .alias('filter', 'f')
+  .alias('sort', 's')
+  .alias('inline', 'i')
+  .alias('help', 'h')
+  .boolean('inline')
+  .default('skip', 0)
+  .default('inline', false);
+
+var argv = optimist.argv;
+if (argv.help || !argv._.length) {
+  optimist.showHelp();
+  process.exit(0);
+}
+
+new Appender(argv._, argv).pipe(process.stdout);
