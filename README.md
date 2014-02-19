@@ -41,4 +41,7 @@ var stream   = new Appender(paths, options);
 * `skip` {integer} number of lines to skip at the beginning of each file (defaults to `0`).
 * `filter` {regexp} only files matching the given regexp (string or litteral) are appended.
 * `sort` {string} sort files by name before appending them (`ASC` or `DESC`).
+* `case-sensitive` {boolean} use a case-sensitive sort for files, ie. a > Z (defaults to `false`).
 * `inline` {boolean} disable linebreak insertion between files (defaults to `false`).
+* `list` {boolean} only list matching files, no appending (defaults to `false`).
+* `verbose` {boolean} print process steps in stderr (defaults to `false`).
